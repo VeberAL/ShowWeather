@@ -1,16 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.demo.Controller">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="361.0" prefWidth="241.0" style="-fx-background-color: #333; -fx-border-color: black; -fx-border-width: 0.2px;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.Controller">
+    <children>
+        <AnchorPane prefHeight="54.0" prefWidth="241.0" style="-fx-background-color: black; -fx-border-color: black; -fx-border-width: 0.2;">
+            <children>
+                <Text fill="WHITE" layoutX="59.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ShowWeather" wrappingWidth="123.763671875">
+                    <font>
+                        <Font name="Harrington" size="20.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+        <Button fx:id="GETDATA" layoutX="39.0" layoutY="131.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="163.0" text="Find out the weather">
+            <font>
+                <Font name="Harrington" size="14.0" />
+            </font>
+        </Button>
+        <Text fill="#363434" fontSmoothingType="LCD" layoutX="57.0" layoutY="189.0" stroke="BLACK" strokeType="INSIDE" text="Information:">
+            <font>
+                <Font name="Harrington" size="24.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="28.0" layoutY="230.0" stroke="#170101" strokeType="OUTSIDE" strokeWidth="0.2" text="Temperature:" />
+        <Text fill="WHITE" layoutX="50.0" layoutY="255.0" stroke="#110000" strokeType="OUTSIDE" strokeWidth="0.2" text="Real feel:" />
+        <Text fill="WHITE" layoutX="43.0" layoutY="282.0" stroke="#1b0101" strokeType="OUTSIDE" strokeWidth="0.2" text="Maximum:" wrappingWidth="60.359375" />
+        <Text fill="WHITE" layoutX="43.0" layoutY="307.0" stroke="#0a0000" strokeType="OUTSIDE" strokeWidth="0.2" text="Minimum:" wrappingWidth="60.359375" />
+        <Text fill="WHITE" layoutX="49.0" layoutY="333.0" stroke="#1e0101" strokeType="OUTSIDE" strokeWidth="0.2" text="Pressure:" wrappingWidth="47.56640625" />
+        <TextField fx:id="CITY" alignment="CENTER" layoutX="40.0" layoutY="81.0" prefHeight="26.0" prefWidth="163.0" promptText="Enter the City">
+            <font>
+                <Font name="Harrington" size="14.0" />
+            </font>
+        </TextField>
+    </children>
+</AnchorPane>
+
