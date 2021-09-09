@@ -28,11 +28,11 @@
                 <Font name="Harrington" size="24.0" />
             </font>
         </Text>
-        <Text fill="WHITE" layoutX="28.0" layoutY="230.0" stroke="#170101" strokeType="OUTSIDE" strokeWidth="0.2" text="Temperature:" />
-        <Text fill="WHITE" layoutX="50.0" layoutY="255.0" stroke="#110000" strokeType="OUTSIDE" strokeWidth="0.2" text="Real feel:" />
-        <Text fill="WHITE" layoutX="43.0" layoutY="282.0" stroke="#1b0101" strokeType="OUTSIDE" strokeWidth="0.2" text="Maximum:" wrappingWidth="60.359375" />
-        <Text fill="WHITE" layoutX="43.0" layoutY="307.0" stroke="#0a0000" strokeType="OUTSIDE" strokeWidth="0.2" text="Minimum:" wrappingWidth="60.359375" />
-        <Text fill="WHITE" layoutX="49.0" layoutY="333.0" stroke="#1e0101" strokeType="OUTSIDE" strokeWidth="0.2" text="Pressure:" wrappingWidth="47.56640625" />
+        <Text fx:id="textTemperature" fill="WHITE" layoutX="28.0" layoutY="230.0" stroke="#170101" strokeType="OUTSIDE" strokeWidth="0.2" text="Temperature:" />
+        <Text fx:id="textfeel" fill="WHITE" layoutX="50.0" layoutY="255.0" stroke="#110000" strokeType="OUTSIDE" strokeWidth="0.2" text="Real feel:" />
+        <Text fx:id="textMaximum" fill="WHITE" layoutX="43.0" layoutY="282.0" stroke="#1b0101" strokeType="OUTSIDE" strokeWidth="0.2" text="Maximum:" wrappingWidth="60.359375" />
+        <Text fx:id="textMinimum" fill="WHITE" layoutX="43.0" layoutY="307.0" stroke="#0a0000" strokeType="OUTSIDE" strokeWidth="0.2" text="Minimum:" wrappingWidth="60.359375" />
+        <Text fx:id="textPressure" fill="WHITE" layoutX="49.0" layoutY="333.0" stroke="#1e0101" strokeType="OUTSIDE" strokeWidth="0.2" text="Pressure:" wrappingWidth="47.56640625" />
         <TextField fx:id="CITY" alignment="CENTER" layoutX="40.0" layoutY="81.0" prefHeight="26.0" prefWidth="163.0" promptText="Enter the City">
             <font>
                 <Font name="Harrington" size="14.0" />

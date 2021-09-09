@@ -28,7 +28,15 @@ public class Controller {
    GETDATA.setOnAction(event -> {
        String getUserCity = CITY.getText().trim();
        String output = getUrlContent("http://api.openweathermap.org/data/2.5/weather?q=" + getUserCity +"&appid=1cabf1029c1a4b949d8196f3140b433b&units=metric");
-       System.out.println(output);
+
+       if (!output.isEmpty()) {
+           JSONObject obj = new JSONObject(output);
+           textTemperature.setText("Temperature: " + obj.getJSONObject("main").getDouble("temp"));
+           textfeel.setText("Real feel: " + obj.getJSONObject("main").getDouble("feels_like"));
+           textMaximum.setText("Maximum: " + obj.getJSONObject("main").getDouble("temp_max"));
+           textMinimum.setText("Minimum: " + obj.getJSONObject("main").getDouble("temp_min"));
+           textPressure.setText("Pressure: " + obj.getJSONObject("main").getDouble("pressure"));
+       }
    });
     }
     private static String getUrlContent(String urlAdress) {
