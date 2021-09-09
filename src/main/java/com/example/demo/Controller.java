@@ -1,6 +1,9 @@
 package com.example.demo;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -22,8 +25,26 @@ public class Controller {
 
     @FXML
     void initialize() {
-        assert GETDATA != null : "fx:id=\"GETDATA\" was not injected: check your FXML file 'Untitled'.";
-        assert CITY != null : "fx:id=\"CITY\" was not injected: check your FXML file 'Untitled'.";
+   GETDATA.setOnAction(event -> {
+       System.out.println("Ok");
+   });
+    }
+    private static String getUrlContent(String urlAdress) {
+        StringBuffer content = new StringBuffer();
+      try{
+        URL url = new URL(urlAdress);
+        URLConnection urlConn = url.openConnection();
 
+          BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConn.getInputStream()));
+          String line;
+
+          while((line = bufferedReader.readLine()) != null) {
+              content.append(line + "\n");
+              }
+             bufferedReader.close();
+      } catch(Exception e) {
+          System.out.println("City not found");
+      }
+      return content.toString();
     }
 }
